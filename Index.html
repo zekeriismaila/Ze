@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Da Vinci&copy; | welcome</title>
+    <style>
+      body {
+        padding-top: 150px;
+        margin: 0;
+        font-family: Roboto, Arial;
+        color: white;
+      }
+
+      .top_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        max-width: 1500px;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 150px;
+        background-color: #2bffed;
+        border-bottom: 12px solid red;
+        z-index: 100;
+      }
+
+      .page_name {
+        display: flex;
+        align-items: center;
+        font-size: 100pt;
+        font-weight: bold;
+        flex-shrink: 0;
+        color: red;
+        margin-left: 10px;
+        font-family:
+          Seymour One,
+          Sans-Serif;
+        flex: 1;
+      }
+
+      .page_name span {
+        color: blue;
+        font-size: 90pt;
+        font-family:
+          Seymour One,
+          Arial;
+        flex-shrink: 0;
+      }
+
+      .nav_bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        background-color: #602903;
+        border-top-right-radius: 90px;
+        border-bottom-right-radius: 60px;
+        flex-shrink: 0;
+      }
+
+      .menu_bar {
+        color: red;
+        font-weight: bold;
+        height: 309px;
+      }
+
+      .welcome_msg {
+        padding-left: 8px;
+        font-size: 120pt;
+        font-family: Permanent Marker;
+        color: red;
+      }
+      .bg {
+        display: flex;
+      }
+      .bg img {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: -2;
+        min-height: 300px;
+        max-height: 800px;
+        max-width: 1500px;
+        flex: 1;
+      }
+      .description {
+        padding-left: 20px;
+        padding-bottom: 10px;
+        font-family: Roboto;
+        display: block;
+        width: 800px;
+        max-width: 1300px;
+        font-size: 25pt;
+        font-weight: 600;
+        color: white;
+        box-shadow: 2px 2px;
+        text-transform: capitalize;
+        margin-bottom: -20px;
+      }
+      .control_panel {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .control_panel button {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        justify-content: center;
+        align-items:center;
+        background-color: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        color: black;
+        width: 400px;
+        font-weight: 700;
+        font-size: 35px;
+      }
+      .control_panel button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        color: white;
+        background-color: black;
+      }
+      .control_panel a {
+        text-decoration: none;
+      }
+      .contactUs_bottun {
+        margin-right: 20px;
+        margin-left: 450px;
+      }
+      .about_bottun {
+        margin-left: 20px;
+      }
+      .content {
+        max-width: 5000px;
+        margin-top: -100px;
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 1450px;
+        padding-bottom: 10px;
+        padding-top: 50px;
+        padding-right: 5px;
+        padding-left: 5px;
+        background-color: #005c54;
+      }
+      .ceo_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        height: 1000px;
+        margin-top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 5000px;
+        border-radius: 90px;
+      }
+      .ceo {
+        flex-direction: column;
+        display: flex;
+        padding: 5px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+      }
+      .ceo_text {
+        position: absolute;
+        bottom: -12px;
+        z-index: 50;
+        color: #2bffed;
+        font-weight: bold;
+        font-size: 30pt;
+        background-color: red;
+        padding: 3px 12px;
+        border-radius: 10px;
+      }
+      .ceo_name {
+        color: red;
+        font-family: Permanent marker;
+        font-size: 50pt;
+        z-index: 0;
+        text-transform: uppercase;
+        padding: 50px;
+        margin-top: -120px;
+        font-weight: bold;
+        background-color: #602903;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 75px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 75px;
+      }
+      h3 {
+        font-family: Permanent marker;
+        text-transform: uppercase;
+        color: red;
+        font-size: 45pt;
+        border-radius: 5px;
+        font-weight: bold;
+        padding-left: 20px;
+        box-shadow: 3px 3px;
+        width: 1400px;
+      }
+      p {
+        padding-left: 30px;
+        font-size: 40pt;
+        width: 1000px;
+      }
+      .contact_button {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        justify-content: space-around;
+        background-color: white;
+        padding: 15px 17px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        color: White;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .contact_button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        color: red;
+        background-color: aqua;
+      }
+      .contact_button a {
+        margin-bottom: 3px;
+        text-decoration: none;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 50pt;
+        color: red;
+        width: 1450px;
+        max-width: 1500px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 150px;
+        background-color: #2bffed;
+        border-top: 12px solid red;
+      }
+    </style>
+    <link
+      rel="icon"
+      href="Ceo.jpg"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top_bar">
+      <div class="nav_bar">
+        <svg
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.5em"
+          width="90px"
+          class="menu_bar"
+        >
+          <path
+            fill="currentColor"
+            d="M24 44q-1.7 0-2.875-1.175T19.95 39.95h8.1q0 1.7-1.175 2.875T24 44Zm-6.6-7.15q-.65 0-1.075-.425Q15.9 36 15.9 35.35q0-.65.425-1.075.425-.425 1.075-.425h13.2q.65 0 1.075.425.425.425.425 1.075 0 .65-.425 1.075-.425.425-1.075.425Zm-1.25-6.05q-3.3-2.15-5.225-5.375Q9 22.2 9 18.15q0-6.1 4.45-10.55Q17.9 3.15 24 3.15q6.1 0 10.55 4.45Q39 12.05 39 18.15q0 4.05-1.9 7.275-1.9 3.225-5.25 5.375Zm1.1-3H30.8q2.4-1.6 3.8-4.15 1.4-2.55 1.4-5.5 0-4.95-3.525-8.475Q28.95 6.15 24 6.15q-4.95 0-8.475 3.525Q12 13.2 12 18.15q0 2.95 1.4 5.5t3.85 4.15Zm6.75 0Z"
+          />
+        </svg>
+      </div>
+      <div class="page_name">Da <span>Vinci</span></div>
+    </div>
+
+    <div class="bg">
+      <img src="Bg.jpg" />
+    </div>
+
+    <h1 class="welcome_msg">
+      welcome
+      <div class="description">
+        Since our establishment, we have been delivering high-quality and
+        sustainable innovative Graphic Designs for corporate business purposes.
+      </div>
+    </h1>
+
+    <div class="control_panel">
+      <a href="Contact us.html"
+        ><button class="contactUs_bottun">contact&nbsp;us</button></a
+      >
+      <a href="Index.html"> <button>home</button></a>
+      <a href="About us.html">
+        <button class="about_bottun">about&nbsp;us</button></a
+      >
+    </div>
+    <div class="content">
+      <div class="ceo">
+        <span class="ceo_text">𓃵</span>
+        <img
+          class="ceo_img"
+          src="Ceo.jpg"
+          alt="image of ceo"
+        />
+        <span class="ceo_name"> Zekeri Ismaila (CEO) </span>
+      </div>
+      <div>
+        <h3>history of Graphic designing</h3>
+        <p>
+          Historians trace the origins of graphic design to early cave paintings
+          from about 38,000 BC. These early forms of cave paintings were how
+          people communicated from one generation to another. Subjects in these
+          cave paintings mainly featured animals, handprints, weapons, and other
+          references to hunting.
+        </p>
+
+        <h3>modern history of graphic designing</h3>
+        <p>
+          Modern graphic design as we know it today can be traced back to the
+          Bauhaus school in Germany(opens in a new tab or window). Founded by
+          Walter Gropius, the Bauhaus launched a new way of thinking that
+          combined arts and crafts, classical and avant-garde styles, form and
+          function.
+        </p>
+      </div>
+    </div>
+    <footer>Da Vinci 2024&copy;</footer>
+  </body>
+</html>
